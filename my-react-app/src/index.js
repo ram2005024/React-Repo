@@ -6,6 +6,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <>
 <App />
-<Nam Name='Pratap' />
+<Nam Name='Ram Sharma' />
 </>
 );
