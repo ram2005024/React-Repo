@@ -12,14 +12,14 @@ export const App = () => {
   let options =useCurrencyOption(from);
   let option=Object.keys(options);
 const convert=()=>{
-  setConvertedAmount(Math.floor(amount*options[to]))
+  setConvertedAmount((amount*options[to]).toFixed(2))
 }
 
   return (
     <div className='h-full w-full flex items-center justify-center'>
       <div className='h-full w-full flex items-center justify-center bg-repeat bg-cover'
         style={{ backgroundImage: "url('https://img.freepik.com/premium-vector/digital-rupee-indian-currency-technology-background-vector_1076263-2116.jpg?uid=R190615326&ga=GA1.1.620745200.1741406883&semt=ais_hybrid')" }}>
-        <form className='h-[60%] w-[30%] flex items-center justify-center'
+        <form className='h-[auto] w-[30%] flex items-center justify-center'
           onSubmit={(e) => {
             e.preventDefault();
             convert();
@@ -67,7 +67,7 @@ const convert=()=>{
               currencyOptions={option}
             />
             <button type='submit'
-              className='cursor-pointer h-[50px] w-[90%] mx-[25px] bg-blue-500 text-white text-[1.4rem] font-semibold rounded-[10px] px-3 py-1 hover:bg-blue-600 hover:shadow-[rgba(50,50,93,0.25)_0px_50px_100px_-20px,_rgba(0,0,0,0.3)_0px_30px_60px_-30px,_rgba(10,37,64,0.35)_0px_-2px_6px_0px_inset] transition-all'
+              className='cursor-pointer h-[50px] mb-6 w-[90%] mx-[25px] bg-blue-500 text-white text-[1.4rem] font-semibold rounded-[10px] px-3 py-1 hover:bg-blue-600 hover:shadow-[rgba(50,50,93,0.25)_0px_50px_100px_-20px,_rgba(0,0,0,0.3)_0px_30px_60px_-30px,_rgba(10,37,64,0.35)_0px_-2px_6px_0px_inset] transition-all'
             >Convert {from} to {to}</button>
           </div>
         </form>
