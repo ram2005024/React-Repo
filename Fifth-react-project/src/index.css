@@ -1,0 +1,148 @@
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+body{
+ min-height:100vh;
+ width:100vw;
+ background-color: aqua;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: aqua;
+}
+#root{
+height:530px;
+width:25%;
+border-radius: 20px;
+}
+.mainContainer{
+  display: flex;
+  height:530px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  background: url('clouds.png');
+  background-size: cover;
+  background-color: rgb(66, 15, 113);
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+.weatherName{
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size:1rem;
+}
+.searchSection{
+  display: flex;
+  padding:15px;
+  width:100%;
+}
+
+.searchInput{
+ padding: 10px ;
+ width:100%;
+ padding-left:35px;
+ background-color:rgba(77, 6, 144, 0.556); 
+ margin-right:5px;
+ border:solid rgba(128, 128, 128, 0.427) 1px;
+ border-radius: 15px;
+ transition: 0.4s ease ;
+ color: white;
+ font-size:1rem;
+ text-transform: uppercase;
+box-shadow: 0px 0px 1px 0.1px rgba(128, 128, 128, 0.808);
+}
+.searchInput::placeholder{
+  text-transform: none;
+}
+.searchInput:hover{
+border:solid whitesmoke 1px;
+}
+.mySearchForm{
+  width:300px;
+  margin-right: 5px;
+  position: relative;
+}
+.mySearchForm span{
+position:absolute;
+left:4px;
+top:20px;
+color: whitesmoke;  
+transform: translateY(-5px);
+}
+.searchLocation{
+  background-color:rgba(77, 6, 144, 0.556); 
+  display:flex;
+  justify-content: center;
+  width:50px;
+  align-items: center;
+  border:solid grey 1px;
+  transition: 0.4s ease ;
+  color:white;
+  border-radius: 10px;
+  border:solid rgba(128, 128, 128, 0.481) 1px;
+  box-shadow: 0px 0px 1px 0.1px rgba(128, 128, 128, 0.808);
+  cursor: pointer;
+}
+.searchLocation button{
+  cursor: pointer;
+}
+.searchLocation button span{
+  font-size:1rem;
+}
+.searchLocation:hover{
+  border:solid whitesmoke 1px;
+}
+.middleSection{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:start;
+  gap:10px;
+  height:60%;
+  color:white;
+}
+.middleImage{
+  height:200px;
+  width:100px;
+
+}
+.weatherDetail{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top:-50px;
+
+}
+.middleContent{
+  display:flex;
+
+}
+.hoursFullForecast {
+  padding: 7px 20px;
+  color: white;
+  margin-top:20px;
+  width:100%;
+  display:flex;
+  gap:50px ;
+  overflow-x: scroll;
+  border:solid rgba(128, 128, 128, 0.481) 1px;
+scrollbar-width: thin;
+scrollbar-color: rgba(7, 255, 197, 0.571) rgba(0, 0, 0, 0.149);
+}
+.listWeather li{
+font-size: small;
+}
+.myErrorText{
+  font-size: 13px;
+  text-align: center;
+  color:white;
+  margin:0px 30px;
+}
+.myErrorimage{
+  margin-top:-50px;
+}
